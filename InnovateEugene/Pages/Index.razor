@@ -1,5 +1,16 @@
 ﻿@page "/"
 
-<h1>Hello, world!</h1>
+<h1>Welcome to Innovate Eugene!</h1>
 
-Welcome to your new app.
+<div>this is going to be a great place to see innivation assets and add new ones. </div>
+
+<RadzenButton Text="@text" Click="@ButtonClicked"></RadzenButton> 
+@code {
+  string text = "OK";
+  void ButtonClicked()
+  {
+    text = text == "OK" ? "Cancel" : "OK";
+  }
+}
+
+
