@@ -8,26 +8,30 @@
 <RadzenCard>
     <div class="row">
         <div class="col-md-6">
-            <h3>New Asset</h3>
-            <RadzenFieldset Style="width:600px;margin-bottom: 20px; height:500px;">
+            <RadzenFieldset Style="width:800px;margin-bottom: 20px; height:500px; padding-bottom:20px">
                 <HeaderTemplate>
                     <span>
-                        <RadzenIcon Icon="account_box" /><b style="font-size:30px">ASSET</b>
+                        <RadzenIcon Icon="account_box" /><b style="font-size:30px">Asset Details</b>
                     </span>
-                    <span>
-                        <RadzenButton Click=@Click Text="Add" />
-                    </span>
+                    
                 </HeaderTemplate>
                 <ChildContent>
-                    <RadzenCard Style="width:300px;height:300px">
+                    <RadzenCard Style="width:600px;height:300px">
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-5">
                                 <div>Name:</div>
                                 <RadzenTextBox Style="margin-bottom: 20px" @bind-Value="@asset.Name" />
                             </div>
+                            <div class="col-md-5">
+                                <div>We'll have address and more info here later</div>
+                            </div>
                         </div>
                     </RadzenCard>
+                    <div Style="margin-top: 20px;">
+                        <RadzenButton Click=@Click Text="Add" />
+                    </div>
                 </ChildContent>
+                
             </RadzenFieldset>
         </div>
     </div>
