@@ -37,10 +37,12 @@ namespace InnovateEugene
             services.AddDefaultIdentity<IdentityUser>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddRazorPages();
-            services.AddServerSideBlazor();
+            services.AddServerSideBlazor().AddCircuitOptions(options => { options.DetailedErrors = true; });
             services.AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuthenticationStateProvider<IdentityUser>>();
             services.AddSingleton<WeatherForecastService>();
-            //services.Add<IUriHelper>(new UriHelper());
+            services.AddHttpClient();
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

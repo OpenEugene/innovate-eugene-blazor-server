@@ -1,12 +1,12 @@
 ﻿@page "/AirTableFetch"
-@inject HttpClient Http
+@inject IHttpClientFactory ClientFactory
 
 <h1>Innovation Assets</h1>
 
 <p>This component demonstrates fetching Asset data from AirTable.</p>
 
 
-<RadzenGrid AllowFiltering="true" AllowPaging="true" PageSize="10" AllowSorting="true" Data="@Assets" TItem="Asset" EmptyText=@emptyText >
+<RadzenGrid AllowFiltering="true" AllowPaging="true" PageSize="10" AllowSorting="true" Data="@Assets" TItem="Asset" EmptyText=@emptyText>
     <Columns>
         <RadzenGridColumn TItem="Asset" Property="Name" Title="Name" />
         <RadzenGridColumn TItem="Asset" Property="AssetType" Title="Asset Type" />
